@@ -1,0 +1,17 @@
+name: ORT End to End Test
+
+on:
+  workflow_dispatch:
+    inputs:
+      ort-version:
+        description: "The version of ORT to test (default: latest)"
+        type: string
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Setup ORT
+        uses: sschuberth/ort-github-actions/cli/setup-ort@main
+        with:
+          ort-version: ${{ inputs.ort-version }}
