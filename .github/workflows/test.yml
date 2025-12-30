@@ -15,3 +15,5 @@ jobs:
         uses: sschuberth/ort-github-actions/cli/setup-ort@main
         with:
           ort-version: ${{ inputs.ort-version }}
+      - name: Setup ORT Requirements
+        uses: sschuberth/ort-github-actions/cli/setup-requirements@main
